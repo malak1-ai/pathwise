@@ -8,7 +8,23 @@
 
 ---
 
-## 🌟 Key Features
+## �️ System Architecture & Flow
+
+```mermaid
+graph TD
+    A[User Input: Job & Industry] --> B{Flask Backend}
+    B --> C[OpenRouter API Request]
+    C --> D[LLM Analysis: Llama-3/Gemma]
+    D --> E[JSON Response Generation]
+    E --> B
+    B --> F[Regex Extraction & Parsing]
+    F --> G[Frontend Dynamic Rendering]
+    G --> H[Skills, Solutions & Books Displayed]
+```
+
+---
+
+## �🌟 Key Features
 
 - **AI-Powered Skill Mapping**: Uses OpenRouter (Llama-3/Gemma) to identify top-tier growth skills.
 - **Actionable Roadmaps**: Provides specific training platforms, labs, and techniques for skill acquisition.
