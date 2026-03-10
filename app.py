@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 @app.route("/")
