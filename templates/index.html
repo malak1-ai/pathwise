@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathWise - Career Growth Skills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts for professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Path<span>Wise</span></h1>
+            <p class="tagline">Unlock your growth potential with AI-driven skill insights.</p>
+        </header>
+
+        <main>
+            <form id="skill-form" class="glass-card">
+                <div class="input-group">
+                    <label for="job">Your Job Title</label>
+                    <input type="text" id="job" placeholder="e.g. Software Engineer" required>
+                </div>
+                <div class="input-group">
+                    <label for="industry">Industry</label>
+                    <input type="text" id="industry" placeholder="e.g. Tech, Healthcare" required>
+                </div>
+                <button type="submit" id="submit-btn">
+                    <span>Analyze Growth Path</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div id="results-container" class="results-container hidden">
+                <section class="results-section">
+                    <h2>Recommended Skills for Growth</h2>
+                    <div id="skills-list" class="skills-grid">
+                        <!-- Skills will be injected here -->
+                    </div>
+                </section>
+
+                <section class="results-section">
+                    <h2>Growth Solutions</h2>
+                    <div id="solutions-list" class="solutions-grid">
+                        <!-- Solutions will be injected here -->
+                    </div>
+                </section>
+
+                <section class="results-section">
+                    <h2>Library for Growth</h2>
+                    <div id="books-list" class="books-grid">
+                        <!-- Books will be injected here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 PathWise. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
